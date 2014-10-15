@@ -1,0 +1,9 @@
+1. create contribmethod table in the test db
+2. deleting date from contact details tab issue - date tag does not allow us to enter 00-00-000
+3. To convert from varchar to date -
+update trips set start_date=STR_TO_DATE(start_date,'%m/%d/%Y'); and then change from varchar to date 
+Before this you may have to change the varchar size.
+
+4. If default value for date in any of the tables is set to 0000-00-00, then from the front-end if you delete date and update/save, you get an error, as value='' is not accepted.
+So, if you have to code so that when value='', set value=0000-00-00. (ex: tr_contact_details mem_since)
+Places with this issue : sider_add_member_exp

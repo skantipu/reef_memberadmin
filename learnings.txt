@@ -1,0 +1,6 @@
+1. polyfills with js - <input type="date"..> not supported in IE. 
+2. refreshing only a portion of a page - using Ajax with jQuery
+3. using varchar(255) or maxlength possible, unless there is a reason otherwise to use less value. In future (much later), we've had cases of data being truncated since we thought that length of 50 is sufficient. Refere how varchar is stored as supposed to char datatye. In char, data is stored by adding trailing spaces making up to the length specified in the datatype. But, in varchar, data is not padded while stored. http://dev.mysql.com/doc/refman/5.0/en/char.html
+4. Reg ex for numbers seperated by commas - pattern="[0-9]+(,[0-9]+)*" (refer sidebar_create_household.php)
+5. http://www.fatheaddesign.com/808/importing-large-sql-files-into-phpmyadmin-under-mamp/
+to import large sql files

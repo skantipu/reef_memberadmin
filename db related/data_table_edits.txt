@@ -1,0 +1,74 @@
+existing table - member
+add the following fields:
+secondary_address1
+secondary_address2
+secondary_city
+secondary_state
+secondary_zip
+secondary_country
+address_notes (255 char)
+informal_salutation (text 500 char)
+informal_addressee (text 500 char)
+formal_salutation (text 500 char)
+formal_addressee (text 500 char)
+donotmail (tinyint - 0/1)
+
+
+existing table - contrib
+add the following fields:
+acknowledged (0/1)
+ack_date (date)
+
+
+existing table - contrib_source
+add a field:
+households_mailed (5 digit number field)
+
+
+create new table - contrib_method
+*this information is currently referenced in the contrib table, but it's hard coded in the edit contrib form and no where else
+fields:
+contribmethod (2 digit number)
+description (text, 255)
+
+create new table - household
+fields:
+householdID (unique, auto-increment)
+informal_hhsalutation (text, 500)
+informal_hhaddressee (text, 500)
+formal_hhsalutation (text, 500)
+formal_hhaddressee (text, 500)
+
+create new table - household_members
+fields:
+hhrecordID (unique, auto-increment)
+householdID (4 digit number)
+memberid
+comments
+
+create new table - log_type
+fields:
+log_typeID (unique, auto-increment, 2 digits)
+log_type_description (text, 100 characters)
+
+create new table - member_log
+fields:
+memberlogID (unique, auto-increment)
+memberid
+date_entered
+user_entered
+log_typeID (2 digit number)
+log_description (text, max possible# characters)
+
+create new table - trips
+fields:
+tripID (unique, auto-increment)
+destination (text, 250 characters)
+start_date
+leader (text, 250 characters)
+
+create new table - trip_participants
+fields:
+participantID (unique, auto-increment)
+tripID
+memberid
