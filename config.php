@@ -1,6 +1,6 @@
 <?php
 	define('DB_SERVER', 'localhost');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
-	define('DB_NAME', 'reef');
+	define('DB_USER', 'xxxx');
+	define('DB_PASSWORD', 'xxxx');
+	define('DB_NAME', 'xxxx');
 ?>
