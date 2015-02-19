@@ -20,7 +20,7 @@
 </head>
 <body style="background-color: #f7f7f7">
 	<?php
-	$temp=0; // a temporary variable. It will be set for wrong user credentials.temp = 1 if wrong user credentials and temp=2 for inactive user. It is used for displaying appropriate error message later in form body
+	$temp=0; // a temporary variable. It will be set for wrong user credentials.temp = 1 if wrong user credentials and  temp=2 for inactive user. It is used for displaying appropriate error message later in form body
 	include 'config.php'; //config.php has database connection related global constants defined in it
 	if(isset($_POST['login'])) //if button 'Login' is clicked
 	{
@@ -88,6 +88,7 @@
 				<label>Password: </label>
 				<input type="password" class="span4" name="password" required /><br>
 				<button class="btn btn-primary" name="login">Login</button>
+				<!-- Links to Register and Change Password -->
 				&nbsp;&nbsp;First time logging in?&nbsp;<a href="login_register.php">Register</a>
 				&nbsp;&nbsp;Other options: <a href="login_change_password.php">Change Password</a>
 			</form>
